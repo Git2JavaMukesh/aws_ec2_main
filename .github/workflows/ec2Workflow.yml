@@ -16,6 +16,7 @@ jobs:
         java-version: '17'
         
     - name: build jar
+      working-directory: ./deployToEc2
       run: |
         chmod +x ./mvnw
         ./mvnw clean package -DskipTests
