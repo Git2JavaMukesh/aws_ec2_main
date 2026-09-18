@@ -9,6 +9,6 @@ public class UserController {
 
     @GetMapping("/user")
     public String getUserDetails(@RequestParam String name){
-        return name+" You are onboarded !! ";
+        return name+" You are onboarded thanks buddy !! ";
     }
 }
