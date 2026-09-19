@@ -16,9 +16,7 @@ jobs:
         java-version: '17'
         
     - name: build jar
-      run: |
-        chmod +x ./deployToEc2/mvnw
-        ./deployToEc2/mvnw clean package -DskipTests
+      run: mvn clean install -DskipTests
       
     - name: login to dockerhub
       uses: docker/login-action@v3
