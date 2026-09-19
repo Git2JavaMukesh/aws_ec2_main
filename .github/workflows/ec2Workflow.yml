@@ -27,7 +27,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USER_NAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}    
     - name: build the docker image
-      run: docker build -t ${{secrets.DOCKERHUB_USER_NAME}}/ec2-image:latest
+      run: docker build -t ${{secrets.DOCKERHUB_USER_NAME}}/ec2-image:latest ./deployToEc2
     - name: push image to docker hub
       run: docker push ${{secrets.DOCKERHUB_USER_NAME}}/ec2-image:latest
     - name: ssh and deploy to java
