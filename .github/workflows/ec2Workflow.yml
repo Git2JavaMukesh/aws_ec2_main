@@ -40,4 +40,4 @@ jobs:
             docker stop ec2-demo || true
             docker rm ec2-demo || true
             docker pull ${{secrets.DOCKERHUB_USER_NAME}}/ec2-image:latest
-            docker run -d --name ec2-demo -p 8080:8080 ${{secrets.DOCKERHUB_USER_NAME}}/ec2-image:latest
+            docker run -d --name ec2-demo -p 8082:8082 ${{secrets.DOCKERHUB_USER_NAME}}/ec2-image:latest
